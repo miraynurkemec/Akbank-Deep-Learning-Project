@@ -10,35 +10,35 @@ Proje, yalnızca bir model dosyası paylaşmakla kalmayıp; **verinin toplanmas�
 
 ## Kullanılan Algoritmalar ve Yöntemler
 
-* **Convolutional Neural Networks (CNN): 
+* **Convolutional Neural Networks (CNN):**  
   * Temel evrişim katmanları (Conv2D, MaxPooling) ile öznitelik çıkarımı.  
   * Batch Normalization ve Dropout ile düzenlileştirme ve overfitting’in önlenmesi.  
   * Dense katmanlar ile sınıflandırma.
 
-* **Veri Ön İşleme ve Artırma: 
+* **Veri Ön İşleme ve Artırma:**  
   * Görsellerin yeniden boyutlandırılması ve normalize edilmesi (0–1 aralığı).  
   * Veri artırma teknikleri: döndürme, kaydırma, yakınlaştırma, yatay çevirme.
-
-* **Optimizasyon ve Eğitim Stratejileri: 
+  
+* **Optimizasyon ve Eğitim Stratejileri:**  
   * `Adam` optimizasyon algoritması.  
-  * Kayıp fonksiyonu: **Categorical Crossentropy**.  
+  * Kayıp fonksiyonu: **Categorical Crossentropy**.
   * Callback’ler: **EarlyStopping** ve **ReduceLROnPlateau**.
-
-* **Değerlendirme:
+  
+* **Değerlendirme:**  
   * Accuracy, Precision, Recall, F1-score metrikleri.  
   * Confusion Matrix ile sınıflar arası karışmaların görselleştirilmesi.
-
-* **Açıklanabilirlik (Explainability):
+  
+* **Açıklanabilirlik (Explainability):**  
   * **Grad-CAM** ile modelin odaklandığı bölgelerin görselleştirilmesi.  
   * Alternatif olarak **Integrated Gradients** ile piksel önem haritaları.
 
- # Metrikler
+# Metrikler
 
 Bu projede elde edilen sonuçlar hem **sayısal metriklerle** hem de **görselleştirmelerle** detaylı olarak değerlendirilmiştir. Amaç, modelin yalnızca yüksek doğruluk sağlaması değil; aynı zamanda hangi sınıflarda güçlü, hangi sınıflarda zorlandığını da ortaya koymaktır.
 
 ---
 
-##  Eğitim ve Doğrulama Performansı
+## Eğitim ve Doğrulama Performansı
 
 * **En iyi doğrulama doğruluğu (val_acc):** %93.08 (Modelin en iyi performansı)  
 * **En iyi test doğruluğu (test_acc):** **%94.45**  
@@ -51,7 +51,7 @@ Eğitim eğrileri incelendiğinde:  
 
 ---
 
-##  Sınıf Bazlı Sonuçlar
+## Sınıf Bazlı Sonuçlar
 
 **Classification Report:**
 
@@ -69,7 +69,7 @@ Eğitim eğrileri incelendiğinde:  
 
 ---
 
-##  Confusion Matrix Yorumları
+## Confusion Matrix Yorumları
 
 Confusion Matrix incelendiğinde:  
 * **Glioma:** %98 gibi çok yüksek recall değeri ile neredeyse tüm glioma vakaları doğru sınıflandırılmıştır. Precision değeri de oldukça yüksektir (0.92), bu da modelin hem kapsamda hem de kesinlikte başarılı olduğunu gösterir.  
@@ -79,7 +79,7 @@ Confusion Matrix incelendiğinde:  
 
 ---
 
-##  Genel Yorum
+## Genel Yorum
 
 * Modelin **en güçlü olduğu sınıf:** No Tumor ve Pituitary (yüksek F1/Recall).  
 * Modelin **en zayıf olduğu sınıf:** Meningioma (diğer sınıflara göre en düşük Recall).  
@@ -88,7 +88,7 @@ Confusion Matrix incelendiğinde:  
 
 ---
 
-##  Çıkarımlar
+## Çıkarımlar
 
 1. **Klinik anlam:** Model, tüm tümör türleri (Glioma, Meningioma, Pituitary) ve sağlıklı (No Tumor) görüntülerin tespitinde çok yüksek başarı göstermektedir.  
 2. **Zayıf nokta:** Meningioma sınıfında, diğer sınıflara göre nispeten daha az kapsamlıdır.  
