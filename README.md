@@ -141,3 +141,4 @@ Projeyi ilerletmek için atılacak her yeni adım (arayüz, gerçek zamanlı ver
 
 # Linkler
 https://www.kaggle.com/code/capswinther/akbank-deep-learning-brain-tumor-mriclassification
+https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
